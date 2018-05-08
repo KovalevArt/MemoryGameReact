@@ -1,0 +1,296 @@
+body {
+    background-color: #1C7430;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0.2px;
+}
+
+.main-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.start-page,
+.end-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+}
+
+.end-page {
+    width: 100%;
+    height: 92vh;
+}
+
+.start-image {
+    margin-top: 15vh;
+}
+
+.heading {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-top: 20px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    margin-bottom: 34px;
+}
+
+.game-page {
+    width: 65%;
+    height: 90vh;
+    padding-top: 6vh;
+}
+
+.row-score {
+    opacity: 0.85;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1%;
+    margin-bottom: 2vh;
+    margin-top: 10px;
+}
+
+.row-score p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.button {
+    cursor: pointer;
+    outline: none;
+}
+
+.row-score .button {
+    border: none;
+    background-color: transparent;
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: -0.25px;
+    padding: 0;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+
+.container {
+    width: 14%;
+    height: 24vh;
+    margin: 0.2%;
+    position: relative;
+    perspective: 700px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.chosen {
+    transform: rotateY(180deg);
+}
+
+.shirt {
+    background: transparent  url("../Cards/SHIRT.png") center center no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.end-image {
+    margin-top: 7vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-button {
+    height: 42px;
+    width: 144px;
+    opacity: 0.85;
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 16px;
+    color: #1C7430;
+    border: none;
+}
+
+.congrats {
+    text-align: center;
+    width: 404px;
+    height: 70px;
+    opacity: 0.85;
+    font-size: 24px;
+    letter-spacing: 0.15px;
+    line-height: 35px;
+    padding: 0;
+    margin-top: 9px;
+    margin-bottom: 40px;
+}
+
+.congrats p {
+    display: block;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+.save-score {
+    width: 20%;
+    min-width: 150px;
+    display: flex;
+    justify-content: space-between;
+    -ms-align-items: bottom;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.save-score input {
+    min-width: 150px;
+    height: 42px;
+    flex: 1;
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 15px 5px;
+    color: #008000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.save-score button {
+    margin: 0 auto;
+}
+
+@media (min-width: 200px) {
+    .game-page {
+        width: 95%;
+    }
+
+    .card-deck {
+        height: 45vh;
+    }
+
+    .container {
+        height: 15vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .game-page {
+        width: 80%;
+    }
+
+    .card-deck {
+        height: 70vh;
+    }
+
+    .container {
+        height: 22vh;
+    }
+}
+
+@media (min-width: 1440px) {
+    .game-page {
+        width: 65%;
+    }
+
+    .card-deck {
+        height: 80vh;
+    }
+
+    .container {
+        height: 24vh;
+    }
+}
+
+.table-wrap {
+    min-width: 350px;
+    max-height: 20vh;
+    overflow: scroll;
+    margin-top: 15px;
+    width: 50%;
+    overflow-x: hidden;
+}
+
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    opacity: 0.85;
+    color: #008000;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.table-row {
+    display: table-row;
+    width: 100%;
+    list-style: none;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 0;
+    margin: 0;
+    min-height: 10px;
+    border: 1px solid #1C7430;
+    padding: 5px;
+}
+
+.table-cell.name {
+    width: 30%;
+}
+
+.table-cell.score {
+    width: 20%;
+}
+
+.table-cell.date {
+    width: 50%;
+}
